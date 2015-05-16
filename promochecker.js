@@ -1,6 +1,9 @@
 function show_prompt()
 {
-var name = prompt("Please enter your Promo code.","");name = name.toUpperCase();switch(name) {
+var name = prompt("Please enter your Promo code.","");
+name = name.toUpperCase();
+
+switch(name) {
 case "BLAIR":
 <!--
 window.location = "http://www.blairscreditrepair.com/"
@@ -25,7 +28,8 @@ case "SPOTLIGHT":
 case "SPOTLITE":
 case "SPOT LIGHT":
 case "SPOT LITE":
-case "D&B":case "STT":
+case "D&B":
+case "STT":
 case "REALTYDR":
 case "SWPG":
 case "PARSONTEAM":
