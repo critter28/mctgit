@@ -1,0 +1,125 @@
+		body {
+			margin : 0;
+			padding : 0;
+			font-family : Arial;
+			background-image : url("images/bgoption1.jpg");
+		}
+		a {
+			color : #000000;
+		}
+		a:hover {
+			text-decoration : none;
+		}
+		.main {
+			position : relative;
+			margin-left : auto;
+			margin-right : auto;
+			padding-top : 20px;
+			padding-bottom : 20px;
+			padding-right : 40px;
+			width : 850px;
+		}
+		h1 {
+			font-size : 36px;
+			color : #ffffff;
+			font-family : Lucida Grande;
+			font-weight : normal;
+			padding-left : 15px;
+			font-weight : bold;
+		}
+		.subtitle {
+			font-size : 18px;
+			color : #ffffff;
+			padding-left : 60px;
+			font-family : Lucida Grande;
+		}
+		.main2 {
+			background-color : #113753;
+			position : relative;
+			padding : 20px 20px 20px 20px;
+			width : 100%;
+			border-radius : 8px;
+		}
+		.bar {
+			background : linear-gradient(#FFFFFF, #C5C5C5);F7F7F7
+			position : relative;
+			margin-left : auto;
+			margin-right : auto;
+			width : 100%;
+			height : 55px;
+			border-radius : 5px;
+			margin-bottom : 20px;
+		}
+		.tab {
+			background : linear-gradient(#F7F7F7, #CCCCCC);
+			color : #333333;
+			position : relative;
+			margin-left : 10px;
+			top : 7px;
+			height : 42px;
+			width : 110px;
+			text-align : center;
+			float : left;
+			line-height : 42px;
+			vertical-align : middle;
+			font-size : 15px;
+			font-weight : bold;
+		}
+		.tab:hover {
+			background : #165793;
+			color : #ffffff;
+		}
+		.tab.currentpage {
+			background : #25292E;
+			color : #ffffff;
+		}
+		.info {
+			background-color : #EBEBEB;
+			position : relative;
+			width : 830px;
+			/*height : 100%;*/
+			border-radius : 5px;
+			padding : 10px 10px 10px 10px;
+		}
+		.footer {
+			position : relative;
+			margin-left : auto;
+			margin-right : auto;
+			width : 100%;
+			text-align : center;
+			color : #ffffff;
+		}
+		.infoRight {
+			background-color : #101114;
+			position : relative;
+			width : 200px;
+			padding : 15px 15px 15px 15px;
+			margin-top : 15px;
+			margin-left : 5px;
+			color : #ffffff;
+			float : right;
+			font-size : 12px;
+			text-align : center;
+		}
+		/*		deprecated, replaced with <hr> on renttoown.tpl.html
+		.seperator {
+			background-color : #EBEBEB;
+			color : #EBEBEB;
+			position : relative;
+			width : 230px;
+			height : 20px;
+			left : 610px;
+			top : 250px;
+		}*/
+		.infoRight a {
+			color : #ffffff;
+		}
+		p.MsoNormal {
+			margin-top:0in;
+			margin-right:0in;
+			margin-bottom:10.0pt;
+			margin-left:0in;
+			line-height:115%;
+			font-size:11.0pt;
+			font-family:"Calibri","sans-serif";
+		}
