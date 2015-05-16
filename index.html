@@ -7,12 +7,14 @@
 	<script type="text/javascript" src="promochecker.js"></script>
 	<script src="angular.min.js"></script>
 	<script src="app.js"></script>
+	<script src="promocheckerService.js"></script>
 </head>
 
 <body ng-controller="NavigationController as navigate">
 	<div class="main">
 		<page-header></page-header>
 		<div class="main2">
+			{{promo}}
 			<navigation-bar></navigation-bar>
 
 			<home-content ng-show="navigate.currentpage === 'home'"></home-content>

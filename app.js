@@ -1,6 +1,6 @@
 var app = angular.module("app", []);
 
-app.controller("NavigationController", function(){
+app.controller("NavigationController", ["$scope", "promocheckerService", function($scope, promocheckerService) {
 
 	this.currentpage = "home";
 	this.promovalue = false;
@@ -11,8 +11,12 @@ app.controller("NavigationController", function(){
 	this.isPage = function(checkValue){
 		return this.currentpage === checkValue;
 	};
+	this.checkPromo = function () {
+		alert("made it here");
+		$scope.promo = promocheckerService.checkPromoCode();
+	};
 
-});
+}]);
 app.directive('pageHeader', function(){	
 	return {
 		restrict: 'E',
@@ -29,7 +33,7 @@ app.directive('navigationBar', function(){
 app.directive('homeContent', function(){	
 	return {
 		restrict: 'E',
-		templateUrl: 'home.tpl.html'
+		templateUrl: 'home.tpl.html',
 	};
 });
 app.directive('footerContent', function(){
