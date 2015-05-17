@@ -94,6 +94,6 @@ app.directive('schedulePostPromo', function(){
 	
 	return {
 		restrict: 'E',
-		templateUrl: 'scedulepostpromo.tpl.html'
+		templateUrl: 'schedulepostpromo.tpl.html'
 	};
 });
