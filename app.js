@@ -1,6 +1,6 @@
 var app = angular.module("app", []);
 
-app.controller("NavigationController", function(){
+app.controller("NavigationController", ["$scope", "promocheckerService", function($scope, promocheckerService) {
 
 	this.currentpage = "home";
 	this.promovalue = false;
@@ -11,8 +11,11 @@ app.controller("NavigationController", function(){
 	this.isPage = function(checkValue){
 		return this.currentpage === checkValue;
 	};
+	this.checkPromo = function () {
+		$scope.promo = promocheckerService.checkPromoCode();
+	};
 
-});
+}]);
 app.directive('pageHeader', function(){	
 	return {
 		restrict: 'E',
@@ -78,5 +81,19 @@ app.directive('creditbuildingContent', function(){
 	return {
 		restrict: 'E',
 		templateUrl: 'creditbuilding.tpl.html'
+	};
+});
+app.directive('homePostPromo', function(){
+	
+	return {
+		restrict: 'E',
+		templateUrl: 'homepostpromo.tpl.html'
+	};
+});
+app.directive('schedulePostPromo', function(){
+	
+	return {
+		restrict: 'E',
+		templateUrl: 'schedulepostpromo.tpl.html'
 	};
 });

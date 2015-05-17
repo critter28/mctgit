@@ -7,6 +7,7 @@
 	<script type="text/javascript" src="promochecker.js"></script>
 	<script src="angular.min.js"></script>
 	<script src="app.js"></script>
+	<script src="promocheckerService.js"></script>
 </head>
 
 <body ng-controller="NavigationController as navigate">
@@ -15,11 +16,13 @@
 		<div class="main2">
 			<navigation-bar></navigation-bar>
 
-			<home-content ng-show="navigate.currentpage === 'home'"></home-content>
+			<home-content ng-show="navigate.currentpage === 'home' && promo == null"></home-content>
+			<home-post-promo ng-show="navigate.currentpage === 'home' && promo != null"></home-post-promo>
 			<latest-news-content ng-show="navigate.currentpage === 'latestnews'"></latest-news-content>
 			<faq-content ng-show="navigate.currentpage === 'faq'"></faq-content>
 			<multimedia-content ng-show="navigate.currentpage === 'multimedia'"></multimedia-content>
-			<schedule-content ng-show="navigate.currentpage === 'schedule'"></schedule-content>
+			<schedule-content ng-show="navigate.currentpage === 'schedule' && promo == null"></schedule-content>
+			<schedule-post-promo ng-show="navigate.currentpage === 'schedule' && promo != null"></schedule-post-promo>
 			<renttoown-content ng-show="navigate.currentpage === 'renttoown'"></renttoown-content>
 			<creditbuilding-content ng-show="navigate.currentpage === 'creditbuilding'"></creditbuilding-content>
 		</div>
