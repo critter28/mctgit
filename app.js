@@ -12,7 +12,6 @@ app.controller("NavigationController", ["$scope", "promocheckerService", functio
 		return this.currentpage === checkValue;
 	};
 	this.checkPromo = function () {
-		alert("made it here");
 		$scope.promo = promocheckerService.checkPromoCode();
 	};
 
@@ -33,7 +32,7 @@ app.directive('navigationBar', function(){
 app.directive('homeContent', function(){	
 	return {
 		restrict: 'E',
-		templateUrl: 'home.tpl.html',
+		templateUrl: 'home.tpl.html'
 	};
 });
 app.directive('footerContent', function(){
@@ -82,5 +81,19 @@ app.directive('creditbuildingContent', function(){
 	return {
 		restrict: 'E',
 		templateUrl: 'creditbuilding.tpl.html'
+	};
+});
+app.directive('homePostPromo', function(){
+	
+	return {
+		restrict: 'E',
+		templateUrl: 'homepostpromo.tpl.html'
+	};
+});
+app.directive('schedulePostPromo', function(){
+	
+	return {
+		restrict: 'E',
+		templateUrl: 'scedulepostpromo.tpl.html'
 	};
 });
