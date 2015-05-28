@@ -1,7 +1,7 @@
-<div class = "info">
+<div class = "info" ng-if="!promo">
 	<div class = "infoRight">
 		<img src = "images/mct_magnify.jpeg"/>
-		<a href ng-click="navigate.setPage('latestnews')">
+		<a href="#/latestnews">
 		<p>TransUnion, Equifax and Experian Agree to Overhaul Credit Reporting Practices</p>
 		</a>
 	</div>
@@ -23,4 +23,23 @@
 	<p>Click to listen</a> to our radio interview with renowned Pittsburgh celebrity, Jack Bogut.</p>
 	<p>We comply with the Credit Repair Organizations Act (CROA).  Our credit program is widely 
 	regarded as the most reliable and effective anywhere today. Call for a free analysis today.</p>
+</div>
+
+<div class = "info" ng-if="promo">
+	<div class = "infoRight">
+		<img src = "images/mct_magnify.jpeg"/>
+		<a href="#/latestnews">
+			<p>TransUnion, Equifax and Experian Agree to Overhaul Credit Reporting Practices</p>
+		</a>
+	</div>
+	<h3>My Credit Team</h3>
+	<p>Your promo code has been accepted! You are now entitled to a free evaluation of your credit
+		report, and may schedule a phone appointment by clicking "<a href="#/schedule">Schedule</a>"
+		here or above.</p>
+	<a href="http://www.mycreditteam.com/audio/spotlightpittsburgh.mp3" target="_blank">
+		<img alt="Spotlight with Jack Bogut" src="images/spotlightpittwithjack.jpeg"
+			 height="172" width="430"/>
+		<p>Click to listen</a> to our radio interview with renowned Pittsburgh celebrity, Jack Bogut.</p>
+	<p>We comply with the Credit Repair Organizations Act (CROA).  Our credit program is widely
+		regarded as the most reliable and effective anywhere today. Call for a free analysis today.</p>
 </div>

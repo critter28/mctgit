@@ -1,99 +1,63 @@
-var app = angular.module("app", []);
+angular.module("app", ['ngRoute'])
+.config(["$routeProvider", function($routeProvider) {
+	$routeProvider
+		.when('/home', {
+			templateUrl: "home.tpl.html"
+		})
+		.when('/latestnews', {
+			templateUrl: "latest-news.tpl.html"
+		})
+		.when('/faq', {
+			templateUrl: "faq.tpl.html"
+		})
+		.when('/multimedia', {
+			templateUrl: "multimedia.tpl.html"
+		})
+		.when('/schedule', {
+			templateUrl: "schedule.tpl.html"
+		})
+		.when('/renttoown', {
+			templateUrl: "renttoown.tpl.html"
+		})
+		.when('/creditbuilding', {
+			templateUrl: "creditbuilding.tpl.html"
+		})
+		.when('/', {
+			redirectTo: "/home"
+		})
+		.otherwise({
+			redirectTo: "/home"
+		});
+}])
+.controller("NavigationController", ["$scope", "promocheckerService", "$route", "$location", "$routeParams",
+		function($scope, promocheckerService, $route, $location, $routeParams) {
 
-app.controller("NavigationController", ["$scope", "promocheckerService", function($scope, promocheckerService) {
+	$scope.$route = $route;
+	$scope.$location = $location;
+	$scope.$routeParams = $routeParams;
 
-	this.currentpage = "home";
-	this.promovalue = false;
-
-	this.setPage = function(target){
-		this.currentpage = target;
-	};
-	this.isPage = function(checkValue){
-		return this.currentpage === checkValue;
-	};
 	this.checkPromo = function () {
 		$scope.promo = promocheckerService.checkPromoCode();
 	};
 
-}]);
-app.directive('pageHeader', function(){	
+}])
+.directive('pageHeader', function(){	
 	return {
 		restrict: 'E',
 		templateUrl: 'header.tpl.html'
 	};
 
-});
-app.directive('navigationBar', function(){	
+})
+.directive('navigationBar', function(){	
 	return {
 		restrict: 'E',
 		templateUrl: 'navigationbar.tpl.html'
 	};
-});
-app.directive('homeContent', function(){	
-	return {
-		restrict: 'E',
-		templateUrl: 'home.tpl.html'
-	};
-});
-app.directive('footerContent', function(){
+})
+.directive('footerContent', function(){
 	
 	return {
 		restrict: 'E',
 		templateUrl: 'footer.tpl.html'
-	};
-});
-app.directive('latestNewsContent', function(){
-	
-	return {
-		restrict: 'E',
-		templateUrl: 'latest-news.tpl.html'
-	};
-});
-app.directive('faqContent', function(){
-	
-	return {
-		restrict: 'E',
-		templateUrl: 'faq.tpl.html'
-	};
-});
-app.directive('multimediaContent', function(){	
-	return {
-		restrict: 'E',
-		templateUrl: 'multimedia.tpl.html'
-	};
-});
-app.directive('scheduleContent', function(){
-	
-	return {
-		restrict: 'E',
-		templateUrl: 'schedule.tpl.html'
-	};
-});
-app.directive('renttoownContent', function(){
-	
-	return {
-		restrict: 'E',
-		templateUrl: 'renttoown.tpl.html'
-	};
-});
-app.directive('creditbuildingContent', function(){
-	
-	return {
-		restrict: 'E',
-		templateUrl: 'creditbuilding.tpl.html'
-	};
-});
-app.directive('homePostPromo', function(){
-	
-	return {
-		restrict: 'E',
-		templateUrl: 'homepostpromo.tpl.html'
-	};
-});
-app.directive('schedulePostPromo', function(){
-	
-	return {
-		restrict: 'E',
-		templateUrl: 'schedulepostpromo.tpl.html'
 	};
 });

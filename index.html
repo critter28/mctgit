@@ -5,7 +5,8 @@
 
 	<link rel = "stylesheet" type = "text/css" href = "mctstyle.css"/>
 	<script type="text/javascript" src="promochecker.js"></script>
-	<script src="angular.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-route.js"></script>
 	<script src="app.js"></script>
 	<script src="promocheckerService.js"></script>
 </head>
@@ -15,19 +16,9 @@
 		<page-header></page-header>
 		<div class="main2">
 			<navigation-bar></navigation-bar>
-
-			<home-content ng-show="navigate.currentpage === 'home' && promo == null"></home-content>
-			<home-post-promo ng-show="navigate.currentpage === 'home' && promo != null"></home-post-promo>
-			<latest-news-content ng-show="navigate.currentpage === 'latestnews'"></latest-news-content>
-			<faq-content ng-show="navigate.currentpage === 'faq'"></faq-content>
-			<multimedia-content ng-show="navigate.currentpage === 'multimedia'"></multimedia-content>
-			<schedule-content ng-show="navigate.currentpage === 'schedule' && promo == null"></schedule-content>
-			<schedule-post-promo ng-show="navigate.currentpage === 'schedule' && promo != null"></schedule-post-promo>
-			<renttoown-content ng-show="navigate.currentpage === 'renttoown'"></renttoown-content>
-			<creditbuilding-content ng-show="navigate.currentpage === 'creditbuilding'"></creditbuilding-content>
+			<div ng-view></div>
 		</div>
 		<footer-content></footer-content>
 	</div>
 </body>
-
 </html>
