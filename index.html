@@ -22,13 +22,17 @@
 </head>
 
 <body ng-controller="NavigationController as navigate">
-	<div class="main">
-		<page-header></page-header>
-		<div class="main2">
+	<div class="container">
+		<div class="row">
+			<page-header></page-header>
+		</div>
+		<div class="row main2">
 			<navigation-bar></navigation-bar>
 			<div ng-view></div>
 		</div>
-		<footer-content></footer-content>
+		<div class="row">
+			<footer-content></footer-content>
+		</div>
 	</div>
 </body>
 </html>

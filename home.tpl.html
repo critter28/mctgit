@@ -1,45 +1,39 @@
-<div class = "info" ng-if="!promo">
-	<div class = "infoRight">
-		<img src = "images/mct_magnify.jpeg"/>
-		<a href="#/latestnews">
-		<p>TransUnion, Equifax and Experian Agree to Overhaul Credit Reporting Practices</p>
-		</a>
+<div class="info">
+	<div class="col-sm-9">
+		<p class="page-title">My Credit Team</p>
+		<div ng-if="!promo">
+			<p>Many features of this private web site (including the
+			$99 set up fee waiver and our free evaluation) are disabled
+			until a valid promotional code is entered. If you do not have a
+			code, please ask the person who referred you. You may also
+			call our office at 412-242-2733 and provide a copy of your credit
+			report to obtain a promotional code.</p>
+			<div class="col-sm-offset-1 col-sm-11">
+				<input ng-click="navigate.checkPromo()" type="button" value="Click Here to Enter your Promo Code"
+				style="width:300px; height:40px; border:red; border-style:solid; border-width:2px; font-weight:bold;"/>
+			</div>
+			<p>If you don't have a Promo Code yet, feel free to check out
+			some of the useful features on this site, including free information
+			about your credit report.</p>
+		</div>
+		<div ng-if="promo">
+			<p>Your promo code has been accepted! You are now entitled to a free evaluation of your credit
+				report, and may schedule a phone appointment by clicking "<a href="#/schedule">Schedule</a>"
+				here or above.</p>
+		</div>
+		<div class="col-sm-11 col-sm-offset-1 interview-picture">
+			<a href="http://www.mycreditteam.com/audio/spotlightpittsburgh.mp3" target="_blank">
+			<img alt="Spotlight with Jack Bogut" src="images/spotlightpittwithjack.jpeg"
+			height="172" width="430"/>
+		</div>
+		<p>Click to listen</a> to our radio interview with renowned Pittsburgh celebrity, Jack Bogut.</p>
+		<p>We comply with the Credit Repair Organizations Act (CROA).  Our credit program is widely
+		regarded as the most reliable and effective anywhere today. Call for a free analysis today.</p>
 	</div>
-	<h3>My Credit Team</h3>
-	<p>Many features of this private web site (including the 
-	$99 set up fee waiver and our free evaluation) are disabled 
-	until a valid promotional code is entered. If you do not have a 
-	code, please ask the person who referred you. You may also 
-	call our office at 412-242-2733 and provide a copy of your credit 
-	report to obtain a promotional code.</p>
-	<input ng-click="navigate.checkPromo()" type="button" value="Click Here to Enter your Promo Code" 
-	style="width:250px; height:40px; border:red; border-style:solid; border-width:2px; font-weight:bold;"/>
-	<p>If you don't have a Promo Code yet, feel free to check out 
-	some of the useful features on this site, including free information 
-	about your credit report.</p>
-	<a href="http://www.mycreditteam.com/audio/spotlightpittsburgh.mp3" target="_blank">
-	<img alt="Spotlight with Jack Bogut" src="images/spotlightpittwithjack.jpeg" 
-	height="172" width="430"/>
-	<p>Click to listen</a> to our radio interview with renowned Pittsburgh celebrity, Jack Bogut.</p>
-	<p>We comply with the Credit Repair Organizations Act (CROA).  Our credit program is widely 
-	regarded as the most reliable and effective anywhere today. Call for a free analysis today.</p>
-</div>
-
-<div class = "info" ng-if="promo">
-	<div class = "infoRight">
+	<div class = "infoRight col-sm-3">
 		<img src = "images/mct_magnify.jpeg"/>
 		<a href="#/latestnews">
 			<p>TransUnion, Equifax and Experian Agree to Overhaul Credit Reporting Practices</p>
 		</a>
 	</div>
-	<h3>My Credit Team</h3>
-	<p>Your promo code has been accepted! You are now entitled to a free evaluation of your credit
-		report, and may schedule a phone appointment by clicking "<a href="#/schedule">Schedule</a>"
-		here or above.</p>
-	<a href="http://www.mycreditteam.com/audio/spotlightpittsburgh.mp3" target="_blank">
-		<img alt="Spotlight with Jack Bogut" src="images/spotlightpittwithjack.jpeg"
-			 height="172" width="430"/>
-		<p>Click to listen</a> to our radio interview with renowned Pittsburgh celebrity, Jack Bogut.</p>
-	<p>We comply with the Credit Repair Organizations Act (CROA).  Our credit program is widely
-		regarded as the most reliable and effective anywhere today. Call for a free analysis today.</p>
 </div>
