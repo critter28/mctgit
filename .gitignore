@@ -2,7 +2,7 @@
 # From Andrew
 # ==============
 testing/
-workspace.xml
+.idea/
 pmip/
 
 # Windows image file caches

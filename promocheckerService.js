@@ -23,6 +23,26 @@ angular.module('app')
 				//-->
 				break;
 
+case "ANDREWSF":
+case "GSH":
+case "CK2":
+case "0318":
+case "PATTISF":
+case "BIGGERPOCKETS":
+case "DANPARSONTEAM":
+case "CODE3":
+case "HSHM":
+case "JOY":
+case "TAMMYZ":
+case "KGI":
+case "LINDSEYR":
+case "CREDIT77":
+case "CDFMARKETING":
+case "CDF":
+case "PAULB":
+case "1STFRUITS":
+case "ILE":
+//insertionMarker
 				case "JAY":
 				case "RAMSEY":
 				case "RAMSY":
