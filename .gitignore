@@ -2,6 +2,8 @@
 # From Andrew
 # ==============
 testing/
+workspace.xml
+pmip/
 
 # Windows image file caches
 Thumbs.db
